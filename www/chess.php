@@ -2,6 +2,7 @@
 //print_r("HERE!!!!!!");
 require_once "../lib/dbconnect.php";
 require_once "../lib/board.php";
+require_once "../lib/game.php"; 
 
 $method = $_SERVER['REQUEST_METHOD'];
  $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
@@ -47,6 +48,20 @@ function handle_board($method){
             }
 }
 
+function handle_piece($method,$x,$y,$input){
+  ; }
+
+  function handle_player($method,$p,$input){
+    ; }
+  
+
+function handle_status($method){
+    if($method=='GET') {
+        show_status();
+            } else  { 
+                header('HTTP/1.1405 Method Not Allowed');
+            }
+        }
 
 ?>
 
