@@ -24,10 +24,10 @@ case 'player':  handle_player($method, $request[0],$input);
 break;
  
 case 'status':
-    if(sizeof($request)==0) {handle_status(Smethod); }
+    if(sizeof($request)==0) {handle_status($method); }
     else {header("HTTP/1.1 404 Not Found");}
     break;
-    case 'players' : handle_player(Smethod, $request, $input);
+    case 'players' : handle_player($method, $request, $input);
     break;
     default: header("HTTP/1.1 404 Not Found");
     exit;
