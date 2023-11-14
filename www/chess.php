@@ -19,7 +19,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 		case null: handle_board($method);break;
 //		case 'piece': handle_piece($method, $request[0],$request[1],$input);
 //					break;
-//		case 'player': handle_player($method, $request[0],$input);
+	case 'player': handle_player($method, $request[0],$input);
 //					break;
 		default: header("HTTP/1.1 404 Not Found");
 				break;
